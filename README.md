@@ -4,6 +4,30 @@ To push changes to Cloudflare
 wrangler deploy
 ```
 
+## Secrets Needed
+
+Found in the [PlusBots app Basic Settings](https://api.slack.com/apps/A05LY8Y7QTF/general)?
+
+```
+wrangler secret put SLACK_SIGNING_SECRET
+```
+
+Found here [PlusBots app OAuth Settings](https://api.slack.com/apps/A05LY8Y7QTF/oauth)?
+
+```
+wrangler secret put SLACK_BOT_ACCESS_TOKEN
+```
+
+Found in Eng 1Pass under the Fauna login credentials
+
+```
+wrangler secret put FAUNADB_SECRET
+```
+
+## Other Variables Needed
+
+FAUNADB_ENDPOINT is set in the wrangler.toml
+
 ## Body for a slack request
 
 ```

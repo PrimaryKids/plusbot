@@ -2,3 +2,6 @@ name = "plusbot"
 main = "src/index.ts"
 compatibility_date = "2022-10-07"
 node_compat = true
+
+[vars]
+FAUNADB_ENDPOINT = "https://db.fauna.com/"

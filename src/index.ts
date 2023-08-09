@@ -4,14 +4,9 @@ import { Hono } from "hono"
 import faunadb from "faunadb"
 
 import plusses from "./handlers/plusses"
-import authorize from "./handlers/authorize"
-import addToSlack from "./handlers/addToSlack"
 
 type Bindings = {
-  SLACK_WEBHOOK_URL: string
   SLACK_SIGNING_SECRET: string
-  SLACK_CLIENT_ID: string
-  SLACK_CLIENT_SECRET: string
   SLACK_BOT_ACCESS_TOKEN: string
   FAUNADB_SECRET: string
   FAUNADB_ENDPOINT: string
