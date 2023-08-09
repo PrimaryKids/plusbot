@@ -24,12 +24,6 @@ app.post("/plusses", async (c) => {
   return await plusses(body, faunaClient)
 })
 
-// new OAuth redirect url
-app.get("/authorize", async (c) => {
-  const botAccessToken = c.env.SLACK_BOT_ACCESS_TOKEN
-  const SlackAPI = new SlackREST({ botAccessToken })
-  authorize(c.req, c.env, SlackAPI)
-})
 app.get("*", async (request) => {
   return new Response("Page not found", { status: 404 })
 })
