@@ -1,10 +1,32 @@
+# PlusBot
+
+An replica of Etsy's original plusbot.
+
+## !! NOTE BEFORE PROCEEDING !!
+
+I (@linzjax) have a confession to make. I did my best to get this set up with Primary specific login
+information (faunadb, cloudflare, slack). However, I hit a blocker: cloudflare was returning a 302
+error code for some reason, and I honestly couldn't spend anymore time on it.
+
+As a result, all of this information lives in my personal accounts... I know I know I'm sorry.
+However, if one day I've won the lottery and am off living my best life, please contact me and I
+will do my best to work with you to transfer all of the records to whatever system works best
+for y'all so that you don't lose the plus records.
+
+Sincerly,
+Lindsey
+
+## Deploy
+
 To push changes to Cloudflare
 
 ```
 wrangler deploy
 ```
 
-## Secrets Needed
+## Variables
+
+### Secrets Needed
 
 Found in the [PlusBots app Basic Settings](https://api.slack.com/apps/A05LY8Y7QTF/general)?
 
@@ -24,11 +46,13 @@ Found in Eng 1Pass under the Fauna login credentials
 wrangler secret put FAUNADB_SECRET
 ```
 
-## Other Variables Needed
+### Other Variables Needed
 
 FAUNADB_ENDPOINT is set in the wrangler.toml
 
-## Body for a slack request
+## Helpful Info
+
+### Body for a slack request
 
 ```
 {
